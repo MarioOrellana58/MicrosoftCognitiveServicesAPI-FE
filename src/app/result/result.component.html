@@ -20,19 +20,19 @@
         <div class="flex-centered">
             <img [src]="result" height="400"/><br>
             <button mat-flat-button (click)="reload()" color="primary" type="button">¡Intentar de nuevo!</button>
+            <br>
+            <h1>¡Comparte en tus Redes Sociales!</h1>
+            
+            <share-buttons theme="circles-dark"
+                [include]="['copy', 'facebook', 'email', 'twitter', 'whatsapp']"
+                [showIcon]="true"
+                [showText]="true"
+                url="router.url"
+                description="Ve tus resultados aquí: "
+                class="pt-5">
+            </share-buttons>
         </div>
         
-        <h1>Angular Share Buttons</h1>
-        
-        <share-buttons theme="circles-dark"
-            [include]="['copy', 'facebook', 'email', 'twitter', 'whatsapp']"
-            [showIcon]="true"
-            [showText]="true"
-            url="router.url"
-            description="Ve tus resultados aquí: "
-            twitterAccount="rodrigokamada"
-            class="pt-5">
-        </share-buttons>
 
     </div>
     
