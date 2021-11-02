@@ -45,7 +45,7 @@ export class UploadComponent implements OnInit {
     public router: Router) { 
 
     this.emailForm = this.formBuilder.group({
-      recaptcha: ['', null] //! AGREGAR COMO REQUERIDO
+      recaptcha: ['', Validators.required]
     });
 
   }
@@ -98,8 +98,8 @@ export class UploadComponent implements OnInit {
 
       console.log("error, email no ingresado");
       Swal.fire({
-        title: 'Correo Electrónico inválido',
-        text: 'Revise el correo electrónico ingresado e intente de nuevo.',
+        title: 'Datos no válidos',
+        text: 'No se han enviado todos los datos requeridos o no se le permite realizar esta acción por motivos de seguridad.',
         icon: 'error',
         customClass:{
           confirmButton: "md-button",
@@ -111,21 +111,16 @@ export class UploadComponent implements OnInit {
 
       this.form = new FormData();
       let data = this.emailForm.getRawValue();
-      
+      console.log("recaptcha", this.emailForm.get('recaptcha')!.value)
       if(this.MultipleFile?.length == 2 && this.MultipleFile[0] != undefined && this.MultipleFile[1] != undefined){
 
         data.image1 = this.MultipleFile![0].split(',')[1];
         data.image2 = this.MultipleFile![1].split(',')[1];
-
+        
         this.isWaiting = true;
-        //* Wait to show temporal result
             
-        //setTimeout(() => {  this.isWaiting = false; this.showResult = true; this.router.navigate(['/result', 123]); }, 3000); 
-
-        //* Commented for presentation purpose
         this.uploadService.sendImages(data).subscribe(
           res => {
-            console.log("res de  mario", res);
             
             this.isWaiting = false; this.showResult = true;
             this.router.navigate(['/result', res.id]);

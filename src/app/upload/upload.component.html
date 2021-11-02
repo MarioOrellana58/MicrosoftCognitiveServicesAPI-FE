@@ -50,12 +50,18 @@
         </div>
         <form (ngSubmit)="submitData()" [formGroup]="emailForm" class="animate__animated animate__fadeInUpBig">
 
-            <ngx-invisible-recaptcha #captchaElem
+            <!-- <ngx-invisible-recaptcha #captchaElem
                 [siteKey]="siteKey"
                 formControlName="recaptcha">
-            </ngx-invisible-recaptcha>
+            </ngx-invisible-recaptcha> -->
 
+            
             <div class="flex-centered">
+           
+                <ngx-recaptcha2 #captchaElem
+                    [siteKey]="siteKey"
+                    formControlName="recaptcha">
+                </ngx-recaptcha2>
     
                 <button mat-flat-button color="primary" type="submit">¡Calcular Porcentaje de Parentesco!</button>
     
