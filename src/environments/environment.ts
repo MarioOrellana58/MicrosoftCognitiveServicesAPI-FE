@@ -8,7 +8,9 @@ export const environment = {
   
   url: 'https://coginitiveservicesapi.azurewebsites.net',
 
-  siteKey: '6Ldd2AsdAAAAAOJTo79cmflQFe5sXCXJ2BSqW9qN',
+  // siteKey: '6Ldd2AsdAAAAAOJTo79cmflQFe5sXCXJ2BSqW9qN',
+  siteKey: '6Lc5CgwdAAAAAGUReIW24eiaULTpgOisLnQyPPmF',
+
 
   sendImage:  `${base}getRelationship`,
   getImage:  `${base}getImageById`
