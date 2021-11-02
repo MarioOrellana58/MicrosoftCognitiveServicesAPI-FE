@@ -6,7 +6,9 @@
 export const environment = {
   production: false,
   
-  url: 'localhost:4200',
+  url: 'https://coginitiveservicesapi.azurewebsites.net',
+
+  siteKey: '6Ldd2AsdAAAAAOJTo79cmflQFe5sXCXJ2BSqW9qN',
 
   sendImage:  `${base}getRelationship`,
   getImage:  `${base}getImageById`

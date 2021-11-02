@@ -6,6 +6,7 @@ import {WebcamImage} from 'ngx-webcam';
 import { Observable, Subject } from 'rxjs';
 import { ReCaptchaV3Service } from 'ngx-captcha';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-upload',
@@ -35,7 +36,7 @@ export class UploadComponent implements OnInit {
   useEmail = false;
   form = new FormData();
 
-  siteKey: string = '6Lc2aAodAAAAAIr3q8VXdi4T9SLyVN_uwX9nCmNl';
+  siteKey: string = environment.siteKey;
 
   constructor(
     private reCaptchaV3Service: ReCaptchaV3Service,
