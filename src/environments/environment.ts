@@ -2,11 +2,11 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-  const base = 'https://coginitiveservicesapi.azurewebsites.net/'
+  const base = 'https://coginitiveservicesapi2.azurewebsites.net/'
 export const environment = {
   production: false,
   
-  url: 'https://coginitiveservicesapi.azurewebsites.net',
+  url: 'https://coginitiveservicesapi2.azurewebsites.net',
 
   // siteKey: '6Ldd2AsdAAAAAOJTo79cmflQFe5sXCXJ2BSqW9qN',
   siteKey: '6LciKgwdAAAAALHpK1_XcROY9pBTs1F08coiGnZc',
